@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import SideBar from "./modules/global/Sidebar";
 import TopBar from "./modules/global/Topbar";
+import Team from "./modules/team";
 import { ColourModeContext, useMode } from "./theme";
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
 						<TopBar setIsSidebar={setIsSidebar} />
 						<Routes>
 							<Route path="/" element={<></>} />
-							<Route path="/team" element={<></>} />
+							<Route path="/team" element={<Team />} />
 							<Route path="/contacts" element={<></>} />
 							<Route path="/invoices" element={<></>} />
 							<Route path="/form" element={<></>} />
