@@ -21,15 +21,16 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
 	const colours = tokens(theme.palette.mode);
 
 	return (
-		<MenuItem
-			active={selected === title}
-			style={{ color: colours.grey[100] }}
-			onClick={() => setSelected(title)}
-			icon={icon}
-		>
-			<Typography>{title}</Typography>
-			<Link to={to} />
-		</MenuItem>
+		<Link to={to} style={{ textDecoration: "none" }}>
+			<MenuItem
+				active={selected === title}
+				style={{ color: colours.grey[100] }}
+				onClick={() => setSelected(title)}
+				icon={icon}
+			>
+				<Typography>{title}</Typography>
+			</MenuItem>
+		</Link>
 	);
 };
 
@@ -81,7 +82,7 @@ const SideBar = () => {
 							</Box>
 						)}
 					</MenuItem>
-                    {/* ADMIN PROFILE */}
+					{/* ADMIN PROFILE */}
 					{!isCollapsed && (
 						<Box mb="25px">
 							<Box display="flex" justifyContent="center" alignItems="center">
@@ -90,7 +91,7 @@ const SideBar = () => {
 									width="100px"
 									height="100px"
 									src="https://images.unsplash.com/photo-1693418161641-99928097b5ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDYwfGlVSXNuVnRqQjBZfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=900&q=60"
-									style={{ cursor: "pointer", borderRadius: "50%", }}
+									style={{ cursor: "pointer", borderRadius: "50%" }}
 								/>
 							</Box>
 							<Box textAlign="center">
@@ -108,7 +109,7 @@ const SideBar = () => {
 							</Box>
 						</Box>
 					)}
-                    {/* ICONS */}
+					{/* ICONS */}
 					<Box paddingLeft={isCollapsed ? undefined : "10%"}>
 						<Item
 							title="Dashboard"
