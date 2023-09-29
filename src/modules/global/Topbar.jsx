@@ -9,15 +9,15 @@ import InputBase from "@mui/material/InputBase";
 import { useContext } from "react";
 import { ColourModeContext, tokens } from "../../theme";
 
-const Topbar = () => {
+const TopBar = () => {
 	const theme = useTheme();
 	const colours = tokens(theme.palette.mode);
 	const colourMode = useContext(ColourModeContext);
 
 	return (
-		<Box>
+		<Box display='flex' justifyContent='space-between' p={2}>
 			{/* SEARCH BAR */}
-			<Box display="flex" backgroundColor={colours.primary[400]} borderRadius="3px">
+			<Box sx={{ display: 'flex', backgroundColor: colours.primary[400], borderRadius: '3px', }}>
 				<InputBase sx={{ ml: 2, flex: 1 }} placeholder="Search" />
 				<IconButton type="button" sx={{ p: 1 }}>
 					<SearchIcon />
@@ -25,7 +25,7 @@ const Topbar = () => {
 			</Box>
 			{/* ICONS */}
 			<Box display="flex">
-				<IconButton onClick={colourMode.toggleColorMode}>
+				<IconButton onClick={colourMode.toggleColourMode}>
 					{theme.palette.mode === "dark" ? (
 						<DarkModeOutlinedIcon />
 					) : (
@@ -46,4 +46,4 @@ const Topbar = () => {
 	);
 };
 
-export default Topbar;
+export default TopBar;

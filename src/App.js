@@ -1,8 +1,8 @@
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import Sidebar from "./modules/global/Sidebar";
-import Topbar from "./modules/global/Topbar";
+import SideBar from "./modules/global/Sidebar";
+import TopBar from "./modules/global/Topbar";
 import { ColourModeContext, useMode } from "./theme";
 
 function App() {
@@ -14,9 +14,9 @@ function App() {
 			<ThemeProvider theme={theme}>
 				<CssBaseline />
 				<div className="app">
-					<Sidebar isSidebar={isSidebar} />
+					<SideBar isSidebar={isSidebar} />
 					<main className="content">
-						<Topbar setIsSidebar={setIsSidebar} />
+						<TopBar setIsSidebar={setIsSidebar} />
 						<Routes>
 							<Route path="/" element={<></>} />
 							<Route path="/team" element={<></>} />

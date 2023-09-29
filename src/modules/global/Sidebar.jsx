@@ -12,8 +12,7 @@ import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { useState } from "react";
-import { Menu, MenuItem, ProSidebar } from "react-pro-sidebar";
-import "react-pro-sidebar/dist/css/styles.css";
+import { Menu, MenuItem, Sidebar } from "react-pro-sidebar";
 import { Link } from "react-router-dom";
 import { tokens } from "../../theme";
 
@@ -34,7 +33,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
 	);
 };
 
-const Sidebar = () => {
+const SideBar = () => {
 	const theme = useTheme();
 	const colours = tokens(theme.palette.mode);
 	const [isCollapsed, setIsCollapsed] = useState(false);
@@ -43,15 +42,23 @@ const Sidebar = () => {
 	return (
 		<Box
 			sx={{
-				"& .pro-sidebar-inner": { background: `${colours.primary[400]} !important` },
+				"& .ps-sidebar-container": {
+					background: "transparent !important",
+					backgroundColor: "transparent !important",
+					border: "none !important",
+					borderWidth: "0px !important",
+					borderRightColor: `${colours.grey[600]}!important`,
+					borderRightWidth: "0px !important",
+				},
+				"& .ps-sidebar-inner": { background: `${colours.primary[500]} !important` },
 				"& .pro-icon-wrapper": { backgroundColor: "transparent !important" },
-				"& .pro-inner-item": { padding: "5px 35px 5px 20px !important" },
-				"& .pro-inner-item:hover": { color: "#868dfb !important" },
-				"& .pro-menu-item.active": { color: "#6870fa !important" },
+				"& .ps-menuitem": { padding: "5px 35px 5px 20px !important" },
+				"& .ps-menu-button:hover": { color: "#868dfb !important" },
+				"& .ps-menu-button.active": { color: "#6870fa !important" },
 			}}
 		>
-			<ProSidebar collapsed={isCollapsed}>
-				<Menu iconShape="square">
+			<Sidebar collapsed={isCollapsed}>
+				<Menu>
 					{/* LOGO AND MENU ICON */}
 					<MenuItem
 						onClick={() => setIsCollapsed(!isCollapsed)}
@@ -66,7 +73,7 @@ const Sidebar = () => {
 								ml="15px"
 							>
 								<Typography variant="h3" color={colours.grey[100]}>
-									Honcho
+									{"   "}
 								</Typography>
 								<IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
 									<MenuOutlinedIcon />
@@ -74,6 +81,7 @@ const Sidebar = () => {
 							</Box>
 						)}
 					</MenuItem>
+                    {/* ADMIN PROFILE */}
 					{!isCollapsed && (
 						<Box mb="25px">
 							<Box display="flex" justifyContent="center" alignItems="center">
@@ -81,8 +89,8 @@ const Sidebar = () => {
 									alt="profile-user"
 									width="100px"
 									height="100px"
-									src="https://images.unsplash.com/photo-1613679074971-91fc27180061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjN8fGF2YXRhcnN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60"
-									className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white"
+									src="https://images.unsplash.com/photo-1693418161641-99928097b5ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDYwfGlVSXNuVnRqQjBZfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=900&q=60"
+									style={{ cursor: "pointer", borderRadius: "50%", }}
 								/>
 							</Box>
 							<Box textAlign="center">
@@ -100,6 +108,7 @@ const Sidebar = () => {
 							</Box>
 						</Box>
 					)}
+                    {/* ICONS */}
 					<Box paddingLeft={isCollapsed ? undefined : "10%"}>
 						<Item
 							title="Dashboard"
@@ -201,9 +210,9 @@ const Sidebar = () => {
 						/>
 					</Box>
 				</Menu>
-			</ProSidebar>
+			</Sidebar>
 		</Box>
 	);
 };
 
-export default Sidebar;
+export default SideBar;
