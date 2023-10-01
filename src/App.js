@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import Contacts from "./modules/contacts";
 import SideBar from "./modules/global/Sidebar";
 import TopBar from "./modules/global/Topbar";
+import Invoices from "./modules/invoices";
 import Team from "./modules/team";
 import { ColourModeContext, useMode } from "./theme";
 
@@ -23,7 +24,7 @@ function App() {
 							<Route path="/" element={<></>} />
 							<Route path="/team" element={<Team />} />
 							<Route path="/contacts" element={<Contacts />} />
-							<Route path="/invoices" element={<></>} />
+							<Route path="/invoices" element={<Invoices />} />
 							<Route path="/form" element={<></>} />
 							<Route path="/bar" element={<></>} />
 							<Route path="/pie" element={<></>} />
