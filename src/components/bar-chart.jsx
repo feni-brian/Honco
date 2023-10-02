@@ -20,6 +20,7 @@ const BarChart = ({ isDashboard = false }) => {
 					},
 				},
 				legends: { text: { fill: colours.grey[100] } },
+				tooltip: { container: { background: colours.grey[600] } },
 			}}
 			keys={["hot dog", "burger", "sandwich", "kebab", "fries", "donut"]}
 			indexBy="country"
