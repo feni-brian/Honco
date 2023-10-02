@@ -1,6 +1,7 @@
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
+import Calendar from "./modules/calendar";
 import Contacts from "./modules/contacts";
 import Form from "./modules/form";
 import SideBar from "./modules/global/Sidebar";
@@ -27,11 +28,11 @@ function App() {
 							<Route path="/contacts" element={<Contacts />} />
 							<Route path="/invoices" element={<Invoices />} />
 							<Route path="/form" element={<Form />} />
+							<Route path="/calendar" element={<Calendar />} />
+							<Route path="/faq" element={<></>} />
 							<Route path="/bar" element={<></>} />
 							<Route path="/pie" element={<></>} />
 							<Route path="/line" element={<></>} />
-							<Route path="/faq" element={<></>} />
-							<Route path="/calendar" element={<></>} />
 							<Route path="/geography" element={<></>} />
 						</Routes>
 					</main>
