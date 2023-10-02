@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Calendar from "./modules/calendar";
 import Contacts from "./modules/contacts";
+import FAQ from "./modules/faq";
 import Form from "./modules/form";
 import SideBar from "./modules/global/Sidebar";
 import TopBar from "./modules/global/Topbar";
@@ -29,7 +30,7 @@ function App() {
 							<Route path="/invoices" element={<Invoices />} />
 							<Route path="/form" element={<Form />} />
 							<Route path="/calendar" element={<Calendar />} />
-							<Route path="/faq" element={<></>} />
+							<Route path="/faq" element={<FAQ />} />
 							<Route path="/bar" element={<></>} />
 							<Route path="/pie" element={<></>} />
 							<Route path="/line" element={<></>} />
