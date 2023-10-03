@@ -11,6 +11,7 @@ import TopBar from "./modules/global/Topbar";
 import Invoices from "./modules/invoices";
 import Team from "./modules/team";
 import { ColourModeContext, useMode } from "./theme";
+import { Pie } from './modules/charts'
 
 function App() {
 	const [theme, colourMode] = useMode();
@@ -33,7 +34,7 @@ function App() {
 							<Route path="/calendar" element={<Calendar />} />
 							<Route path="/faq" element={<FAQ />} />
 							<Route path="/bar" element={<Bar />} />
-							<Route path="/pie" element={<></>} />
+							<Route path="/pie" element={<Pie />} />
 							<Route path="/line" element={<></>} />
 							<Route path="/geography" element={<></>} />
 						</Routes>

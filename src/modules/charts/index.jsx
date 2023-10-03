@@ -1,4 +1,4 @@
-import Bar from './bar'
+import Bar from "./bar";
+import Pie from "./pie";
 
-export { Bar }
-
+export { Bar, Pie };
