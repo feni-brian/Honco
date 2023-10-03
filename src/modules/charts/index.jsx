@@ -1,4 +1,5 @@
 import Bar from "./bar";
+import Line from "./line";
 import Pie from "./pie";
 
-export { Bar, Pie };
+export { Bar, Line, Pie };
