@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import Calendar from "./modules/calendar";
 import { Bar, Geography, Line, Pie } from "./modules/charts";
 import Contacts from "./modules/contacts";
+import Dashboard from "./modules/dashboard";
 import FAQ from "./modules/faq";
 import Form from "./modules/form";
 import SideBar from "./modules/global/Sidebar";
@@ -25,7 +26,7 @@ function App() {
 					<main className="content">
 						<TopBar setIsSidebar={setIsSidebar} />
 						<Routes>
-							<Route path="/" element={<></>} />
+							<Route path="/" element={<Dashboard />} />
 							<Route path="/team" element={<Team />} />
 							<Route path="/contacts" element={<Contacts />} />
 							<Route path="/invoices" element={<Invoices />} />
