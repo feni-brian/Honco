@@ -3,7 +3,7 @@ import { ResponsiveLine } from "@nivo/line";
 import { mockLineData as data } from "../data/mock-data";
 import { tokens } from "../theme";
 
-const LineChart = ({ isCustomLineColours = false, isDashboard = false }) => {
+const LineChart = ({ isDashboard = false }) => {
 	const theme = useTheme();
 	const colours = tokens(theme.palette.mode);
 
@@ -20,7 +20,7 @@ const LineChart = ({ isCustomLineColours = false, isDashboard = false }) => {
 					},
 				},
 				legends: { text: { fill: colours.grey[100] } },
-				tooltip: { container: { color: colours.grey[600] } },
+				tooltip: { container: { background: colours.grey[600] } },
 			}}
 			colors={isDashboard ? { datum: "color" } : { scheme: "nivo" }}
 			margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
