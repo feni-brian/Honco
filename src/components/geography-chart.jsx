@@ -11,7 +11,7 @@ const GeographyChart = ({ isDashboard = false }) => {
 	return (
 		<ResponsiveChoropleth
 			data={data}
-			features={geoFeatures}
+			features={geoFeatures.features}
 			theme={{
 				axis: {
 					domain: { line: { stroke: colours.grey[100] } },
@@ -22,7 +22,9 @@ const GeographyChart = ({ isDashboard = false }) => {
 					},
 				},
 				legends: { text: { fill: colours.grey[100] } },
+				tooltip: { container: { background: colours.grey[600] } },
 			}}
+			colors="nivo"
 			margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
 			domain={[0, 1_000_000]}
 			unknownColor="#666666"
