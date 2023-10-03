@@ -2,7 +2,7 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Calendar from "./modules/calendar";
-import { Bar, Pie, Line } from "./modules/charts";
+import { Bar, Geography, Line, Pie } from "./modules/charts";
 import Contacts from "./modules/contacts";
 import FAQ from "./modules/faq";
 import Form from "./modules/form";
@@ -35,7 +35,7 @@ function App() {
 							<Route path="/bar" element={<Bar />} />
 							<Route path="/pie" element={<Pie />} />
 							<Route path="/line" element={<Line />} />
-							<Route path="/geography" element={<></>} />
+							<Route path="/geography" element={<Geography />} />
 						</Routes>
 					</main>
 				</div>

@@ -1,5 +1,6 @@
 import Bar from "./bar";
+import Geography from "./geography";
 import Line from "./line";
 import Pie from "./pie";
 
-export { Bar, Line, Pie };
+export { Bar, Geography, Line, Pie };
