@@ -22,10 +22,11 @@ const LineChart = ({ isDashboard = false }) => {
 				legends: { text: { fill: colours.grey[100] } },
 				tooltip: { container: { background: colours.grey[600] } },
 			}}
-			colors={isDashboard ? { datum: "color" } : { scheme: "nivo" }}
+			/* colors={isDashboard ? { datum: "color" } : { scheme: "nivo" }} */
+			colors={{ scheme: "category10" }}
 			margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
 			xScale={{ type: "point" }}
-			yScale={{ type: "linear", min: "auto", max: "auto", stacked: true, reverse: false }}
+			yScale={{ type: "linear", min: -50, max: 600, stacked: true, reverse: false }}
 			yFormat=" >-.2f"
 			curve="catmullRom"
 			axisTop={null}
