@@ -90,7 +90,7 @@ const SideBar = () => {
 									alt="profile-user"
 									width="100px"
 									height="100px"
-									src="https://images.unsplash.com/photo-1693418161641-99928097b5ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDYwfGlVSXNuVnRqQjBZfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=900&q=60"
+									src="https://images.unsplash.com/photo-1617791160536-598cf32026fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHdhbGxwYXBlciUyMDRrfGVufDB8fDB8fHww&auto=format&fit=crop&w=900&q=60"
 									style={{ cursor: "pointer", borderRadius: "50%" }}
 								/>
 							</Box>
