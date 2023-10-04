@@ -46,7 +46,7 @@ yup
 
 ## Credits
 
-All Credit 👏🏾 goes to ***EdRoh*** for building the original app on which what I based mine off of; it's exactly the same with some minor changes. 
+All Credit 👏🏾 goes to ***EdRoh*** for building the original app on which I based mine off of; it's exactly the same with some minor changes. 
 To see the code base for the original app, here's the link to the github [repo](https://github.com/ed-roh/react-admin-dashboard.git). Make sure to leave a star.
 In addition, watch the youtube [tutorial](https://youtu.be/wYpCWwD1oz0) and don't forget to like it if you do.
 
